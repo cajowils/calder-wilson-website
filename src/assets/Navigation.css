@@ -1,0 +1,128 @@
+.appbar {
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #22223B;
+    color: #fff;
+    position: fixed;
+    padding: 0;
+    width: 100%;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.name {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+    z-index: 3000;
+}
+
+.appbar .MuiIconButton-root {
+    color: #fff;
+    z-index: 3000;
+    padding: 1rem;
+}
+
+/* Navigation.css */
+.appbar .desktopTabs {
+    display: none;
+  }
+
+@media screen and (min-width: 900px) { /* adjust breakpoint as needed */
+    .appbar {
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        width: 10rem;
+    }
+    
+    .appbar .desktopTabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center; /* Center it vertically */
+        flex-grow: 1; /* Takes up remaining space */
+
+    }
+
+    .appbar .MuiIconButton-root {
+        display: none;
+    }
+    .appbar .drawer {
+        display: none;
+    }
+    .name {
+        align-self: flex-start; /* Align to the top */
+        margin-top: 1rem;
+    }
+}
+  
+.tab {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    padding: 10px 10px 10px 0;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+/* .tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+} */
+
+/* Drawer CSS */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -10rem;
+    width: 10rem;
+    height: 100%;
+    background: #22223B;
+    transition: right 0.3s ease;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .appbar .mobileTabs {
+    margin-top: 10rem;
+  }
+  
+  .drawer.open {
+    right: 0;  /* Shown */
+  }
+
+  .blur {
+    display: none;
+  }
+
+  .blur.active {
+    display: block;
+    position: fixed;
+    top: 3rem;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 500 !important;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
