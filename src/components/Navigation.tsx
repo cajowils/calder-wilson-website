@@ -128,7 +128,7 @@ const Navigation: React.FC = () => {
   return (
     <div className='appbar'>
       <div className={`name ${showHomeInfo ? 'active' : ''}`}>Calder Wilson</div>
-      <div className={`blur ${menuOpen ? 'active' : ''}`}></div>
+      <div className={`blur ${menuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
 
       {/* Mobile Hamburger Menu */}
       <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuToggle}>
