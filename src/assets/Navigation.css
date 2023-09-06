@@ -63,11 +63,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
     }
 
     .appbar .MuiIconButton-root {
@@ -125,6 +120,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  
+  .drawer.open {
+    right: 0;  /* Shown */
+  }
 
   .appbar svg {
     color: #F1F2F6;
@@ -134,15 +133,7 @@
     height: 5rem;
     margin-bottom: 0.5rem;
   }
-
-  .appbar .mobileTabs {
-    margin-top: 10rem;
-  }
   
-  .drawer.open {
-    right: 0;  /* Shown */
-  }
-
   .blur {
     display: none;
   }
@@ -157,4 +148,9 @@
     backdrop-filter: blur(3px);
     z-index: 500 !important;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+  .mobile-header-spacer {
+    opacity: 0;
+    height: 3rem;
+    top: 0;
   }

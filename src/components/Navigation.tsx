@@ -112,7 +112,7 @@ const Navigation: React.FC = () => {
   const TabsComponent = () => (
     <div className='tabs'>
       {sections.map(section => (
-        <Link key={section} to={section} smooth={true} offset={-50} duration={500} onClick={closeMenu}>
+        <Link key={section} to={section} smooth={true} offset={-50} duration={750} onClick={closeMenu}>
           <div className={'tab'}>
             <span style={{color: calculateColor(activeProximity[section], BASE_COLOR, ACTIVE_COLOR)}}>
               {capitalizeFirstCharacter(section)}
@@ -137,6 +137,7 @@ const Navigation: React.FC = () => {
       {/* Mobile Navigation */}
       <div className={`drawer ${menuOpen ? 'open' : ''}`}>
         
+        <div className='mobile-header-spacer'></div>
         <div className='mobileTabs'>
           <TabsComponent/>
         </div>
