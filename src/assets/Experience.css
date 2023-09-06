@@ -18,7 +18,7 @@
 
 .experience-card {
     width: 20rem;
-    height: 25rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -85,10 +85,14 @@
 @media screen and (min-width: 800px) { 
     .experience-card {
         width: 30rem;
+        height: 30rem;
     }
     .skill-images img {
         width: 4rem;
         height: 4rem;
+    }
+    .experience-card li {
+        font-size: 1rem !important;
     }
 }
 
@@ -101,27 +105,26 @@
     padding: 1rem;
 }
 
-.experience-card h2 {
+.front h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0 0 1rem 0;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
 
-.experience-card h4 {
+.front h4 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin: 0 0 1rem 0;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
 
-.experience-card p {
-    font-size: 1rem;
+.experience-card li {
+    font-size: .9rem;
     font-weight: 400;
-    margin: 0 0 1rem 0;
-    padding: 0;
-    text-align: center;
+    margin: 0;
+    padding: .1rem .5rem;
 }
 
