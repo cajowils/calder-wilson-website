@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
     <div id='experience' className='experience-page'>
         <h1>Experience</h1>
         <div className='experience-sections'>
-          <ExperienceSection title='Software Development Engineer Intern' logo={process.env.PUBLIC_URL + '../logos/amazon-logo.svg'} company='Amazon' date='Sept 2022 - Dec 2022' description='A brief description of your experience at this company.' />
+          <ExperienceSection title='Software Development Engineer Intern' logo={process.env.PUBLIC_URL + '../logos/amazon-logo.svg'} company='Amazon' date='Sept 2022 - Dec 2022' description='Developed ' />
           <ExperienceSection title='Software Engineer Intern' logo={process.env.PUBLIC_URL + '../logos/nm-logo.svg'} company='Northwesern Mutual' date='June 2022 - Aug 2022' description='A brief description of your experience at this company.' />
         </div>
     </div>

@@ -6,7 +6,6 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Resume from './components/Resume';
 import Contact from './components/Contact';
 
 import './assets/App.css';
@@ -20,8 +19,6 @@ function App() {
       <Skills/>
       <Experience/>
       <Projects/>
-      <Resume/>
-      <Contact/>
     </div>
   );
 }

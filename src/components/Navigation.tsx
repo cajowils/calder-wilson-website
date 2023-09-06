@@ -4,11 +4,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-scroll';
 import '../assets/Navigation.css';
+import Contact from './Contact';
+
+const NAME_ACTIVATION_POINT = 100;
+const BASE_COLOR = '#F1F2F6';
+const ACTIVE_COLOR = '#758BFD';
 
 const Navigation: React.FC = () => {
-  const sections = ['home', 'about', 'skills', 'experience', 'projects', 'resume', 'contact'];
+  const sections = ['home', 'about', 'skills', 'experience', 'projects'];
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProximity, setActiveProximity] = useState<Record<string, number>>({'home': 1});
+  const [showHomeInfo, setShowHomeInfo] = useState(false);
+
 
   
 
@@ -36,6 +43,13 @@ const Navigation: React.FC = () => {
     return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
   };
   
+  function capitalizeFirstCharacter(s: string) {
+    if (s.length === 0) {
+        return "";
+    }
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
 
   const handleMenuToggle = () => {
     menuOpen ? closeMenu() : openMenu();
@@ -51,20 +65,41 @@ const Navigation: React.FC = () => {
     setMenuOpen(true);
   };
 
-
-  const handleScroll = () => {
+  const handleProximity = () => {
     const proximities: { [key: string]: number } = {};
 
     for (const section of sections) {
       const element = document.getElementById(section);
+
       if (element) {
         const rect = element.getBoundingClientRect();
-        const proximity = 1 - Math.abs(window.innerHeight / 2 - (rect.top + rect.height / 2)) / (window.innerHeight / 2);
+        const proximity = Math.max(0, 1 - Math.abs(window.innerHeight / 2 - (rect.top + rect.height / 2)) / (window.innerHeight / 2));
         proximities[section] = proximity;
-      }
-    }
 
+        }
+      }
     setActiveProximity(proximities);
+  };
+
+  const handleHomeInfo = () => {
+    const element = document.getElementById('home-page-name');
+
+    // Get its position and height
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const elementBottom = rect.bottom + window.scrollY;
+
+      // Get current scroll position
+      const scrollPosition = window.scrollY;
+
+      // Show the name if we've scrolled past the element
+      setShowHomeInfo(scrollPosition > elementBottom);
+    }
+  };
+
+  const handleScroll = () => {
+    handleProximity();
+    handleHomeInfo();
   };
 
   useEffect(() => {
@@ -77,10 +112,10 @@ const Navigation: React.FC = () => {
   const TabsComponent = () => (
     <div className='tabs'>
       {sections.map(section => (
-        <Link key={section} to={section} smooth={true} offset={0} duration={500} onClick={closeMenu}>
+        <Link key={section} to={section} smooth={true} offset={-50} duration={500} onClick={closeMenu}>
           <div className={'tab'}>
-            <span style={{color: calculateColor(activeProximity[section], '#FFFFFA', '#758BFD')}}>
-              {section}
+            <span style={{color: calculateColor(activeProximity[section], BASE_COLOR, ACTIVE_COLOR)}}>
+              {capitalizeFirstCharacter(section)}
             </span>
           </div>
         </Link>
@@ -92,7 +127,7 @@ const Navigation: React.FC = () => {
 
   return (
     <div className='appbar'>
-      <div className='name'>Calder Wilson</div>
+      <div className={`name ${showHomeInfo ? 'active' : ''}`}>Calder Wilson</div>
       <div className={`blur ${menuOpen ? 'active' : ''}`}></div>
 
       {/* Mobile Hamburger Menu */}
@@ -105,10 +140,14 @@ const Navigation: React.FC = () => {
         <div className='mobileTabs'>
           <TabsComponent/>
         </div>
+          <Contact/>
       </div>
       {/* Desktop Navigation */}
       <div className="desktopTabs">
         <TabsComponent/>
+      </div>
+      <div className={`desktopContact ${showHomeInfo ? 'active' : ''}`}>
+        <Contact/>
       </div>
     </div>
   );

@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../assets/About.css';
 
 const About: React.FC = () => {
+
+  const [isVisible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    const aboutElement = document.getElementById('about');
+    if (aboutElement) {
+      const rect = aboutElement.getBoundingClientRect();
+      if (rect.top <= window.innerHeight*.75 && rect.bottom >= 0) {
+        setVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    
+    // Cleanup
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
-    <div id='about' className='about-page'>
+    <div id='about' className={`about-page ${isVisible ? 'fade-in' : 'invisible'}`}>
+        <div className='about-container'>
         <h1>About Me</h1>
-        <p>Hey there! I'm Calder, a Software Engineer who recently graduated from the University of California, Santa Cruz, holding a Bachelor's in Computer Science and a minor in Linguistics. I've had the privilege of working with industry giants like Amazon and Northwestern Mutual, where I've contributed to innovative projects and improved user experiences. Outside of the tech world, I'm passionate about music, and you'll probably find me slapping the bass or plucking my mandolin in my free time. I also enjoy exploring the outdoors, and am always down for a hike. Let's connect and discuss how I can bring value to your team.</p>
+          <p>Hey there! I'm Calder, a recent graduate from the <b>University of California, Santa Cruz</b>, holding a Bachelor's in Computer Science and a minor in Linguistics. I've had the privilege of working with industry giants like <b>Amazon</b> and <b>Northwestern Mutual</b>, where I've contributed to innovative projects and improved user experiences.</p>
+          <p>Outside of the tech world, I'm passionate about music, and you'll probably find me playing piano or guitar in my free time. I also enjoy exploring the outdoors, and am always down for a hike.</p>
+          <p>I'm currently looking for <b>entry-level software engineer</b> positions.  If you're in the market for a dedicated, versatile developer, let's connect—I'd love to discuss how I can add value to your team!</p>
+        </div>
     </div>
     );
 }
