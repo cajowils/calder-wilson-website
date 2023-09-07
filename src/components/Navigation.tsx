@@ -112,7 +112,7 @@ const Navigation: React.FC = () => {
   const TabsComponent = () => (
     <div className='tabs'>
       {sections.map(section => (
-        <Link key={section} to={section} smooth={true} offset={-50} duration={750} onClick={closeMenu}>
+        <Link key={section} to={section} smooth={true} offset={-100} duration={750} onClick={closeMenu}>
           <div className={'tab'}>
             <span style={{color: calculateColor(activeProximity[section], BASE_COLOR, ACTIVE_COLOR)}}>
               {capitalizeFirstCharacter(section)}

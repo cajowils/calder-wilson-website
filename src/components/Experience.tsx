@@ -21,7 +21,7 @@ const ExperienceCard = (props: {title: string, logo: string, company: string, da
             <div className='back'>
                 <img src={process.env.PUBLIC_URL + props.logo} alt={props.company} className='company-logo' />
                 <div className='skill-images'>
-                    {props.skills.map((skill, index) => <img key={index} src={process.env.PUBLIC_URL + skill} alt={skill} />)}
+                    {props.skills.map((skill, index) => <img key={index} src={process.env.PUBLIC_URL + skill} />)}
                 </div>
             </div>
         </div>

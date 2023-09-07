@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 5rem 0;
+  margin: 20% 0;
   padding: 0;
 }
 
@@ -26,7 +26,7 @@
     align-items: center;
     margin: 1rem;
     padding: 1rem 0rem;
-    border: 1px solid #758BFD;
+    border: 1px solid #22223B;
     border-radius: 2rem;
     transition: 0.3s ease;
     position: relative;
@@ -36,7 +36,7 @@
 
 .experience-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 0 3px #758BFD;
+    border: solid 3px #758BFD;
     cursor: pointer;
 }
 
@@ -60,7 +60,7 @@
     transform: rotateY(180deg);
 }
 
-.skill-images {
+.experience-card .skill-images {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -71,7 +71,7 @@
     width: 90%;
 }
 
-.skill-images img {
+.experience-card .skill-images img {
     width: 3.5rem;
     height: 3.5rem;
     object-fit: contain;
@@ -87,7 +87,7 @@
         width: 30rem;
         height: 30rem;
     }
-    .skill-images img {
+    .experience-card .skill-images img {
         width: 4rem;
         height: 4rem;
     }
