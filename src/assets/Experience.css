@@ -35,8 +35,8 @@
 }
 
 .experience-card:hover {
-    transform: scale(1.03);
-    border: solid 3px #758BFD;
+    border: solid 1px #758BFD;
+    box-shadow: #758BFD 0px 0px 10px 0px;
     cursor: pointer;
 }
 
