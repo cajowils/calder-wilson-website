@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/calder-wilson-website/static/css/main.625156b4.css",
+    "main.js": "/calder-wilson-website/static/js/main.e774c95f.js",
+    "static/js/787.3b574a1a.chunk.js": "/calder-wilson-website/static/js/787.3b574a1a.chunk.js",
+    "index.html": "/calder-wilson-website/index.html",
+    "main.625156b4.css.map": "/calder-wilson-website/static/css/main.625156b4.css.map",
+    "main.e774c95f.js.map": "/calder-wilson-website/static/js/main.e774c95f.js.map",
+    "787.3b574a1a.chunk.js.map": "/calder-wilson-website/static/js/787.3b574a1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.625156b4.css",
+    "static/js/main.e774c95f.js"
+  ]
+}
