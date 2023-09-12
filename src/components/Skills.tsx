@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import getSkillLogo from './getSkillLogo';
 import '../assets/Skills.css';
 
 interface SkillInfo {
@@ -9,43 +10,44 @@ interface SkillInfo {
 const Skill = (props: {name: string, icon: string}) => {
     return (
         <div className='skill'>
-        <img src={props.icon} alt={props.name} />
-        <h3>{props.name}</h3>
+            <img src={props.icon} alt={props.name} />
+            <h3>{props.name}</h3>
         </div>
     );
 }
 
 const Languages: SkillInfo[] = [
-    { name: 'Java', logo: '../logos/java-logo.svg' },
-    { name: 'Python', logo: '../logos/python-logo.svg' },
-    { name: 'C/C++', logo: '../logos/c-logo.svg' },
-    { name: 'JavaScript', logo: '../logos/javascript-logo.svg' },
-    { name: 'TypeScript', logo: '../logos/typescript-logo.svg'},
-    { name: 'SQL', logo: '../logos/sql-logo.svg' },
-    { name: 'HTML', logo: '../logos/html-logo.svg' },
-    { name: 'CSS', logo: '../logos/css-logo.svg' },
-    { name: 'Bash', logo: '../logos/bash-logo.svg'}
+    { name: 'Java', logo: getSkillLogo('Java') },
+    { name: 'Python', logo: getSkillLogo('Python') },
+    { name: 'C', logo: getSkillLogo('C') },
+    { name: 'C++', logo: getSkillLogo('C++') },
+    { name: 'JavaScript', logo: getSkillLogo('JavaScript') },
+    { name: 'TypeScript', logo: getSkillLogo('TypeScript') },
+    { name: 'SQL', logo: getSkillLogo('SQL') },
+    { name: 'HTML', logo: getSkillLogo('HTML') },
+    { name: 'CSS', logo: getSkillLogo('CSS') },
+    { name: 'Bash', logo: getSkillLogo('Bash') },
 ]
 const ToolsFrameworks: SkillInfo[] = [
-    { name: 'AWS', logo: '../logos/aws-logo.svg' },
-    { name: 'git', logo: '../logos/git-logo.svg' },
-    { name: 'CI/CD', logo: '../logos/cicd-logo.svg' },
-    { name: 'Jira', logo: '../logos/jira-logo.svg' },
-    { name: 'UNIX', logo: '../logos/unix-logo.svg' },
-    { name: 'GraphQL', logo: '../logos/graphql-logo.svg' },
-    { name: 'Spring', logo: '../logos/spring-logo.svg' },
-    { name: 'Spark', logo: '../logos/spark-logo.svg' },
-    { name: 'Node.js', logo: '../logos/node-logo.svg' },
-    { name: 'Express.js', logo: '../logos/expressjs-logo.svg' },
-    { name: 'REST', logo: '../logos/rest-logo.svg' },
+    { name: 'AWS', logo: getSkillLogo('AWS') },
+    { name: 'git', logo: getSkillLogo('git') },
+    { name: 'CI/CD', logo: getSkillLogo('CI/CD') },
+    { name: 'Jira', logo: getSkillLogo('Jira') },
+    { name: 'UNIX', logo: getSkillLogo('UNIX') },
+    { name: 'GraphQL', logo: getSkillLogo('GraphQL') },
+    { name: 'Spring', logo: getSkillLogo('Spring') },
+    { name: 'Spark', logo: getSkillLogo('Spark') },
+    { name: 'Node.js', logo: getSkillLogo('Node.js') },
+    { name: 'Express.js', logo: getSkillLogo('Express.js') },
+    { name: 'REST', logo: getSkillLogo('REST') },
 ]
 const Libraries: SkillInfo[] = [
-    { name: 'React', logo: '../logos/react-logo.svg' },
-    { name: 'Tensorflow', logo: '../logos/tensorflow-logo.svg' },
-    { name: 'Mockito', logo: '../logos/mockito-logo.svg' },
-    { name: 'JUnit', logo: '../logos/junit-logo.svg' },
-    { name: 'Pandas', logo: '../logos/pandas-logo.svg' },
-    { name: 'Handlebars.js', logo: '../logos/handlebarsjs-logo.svg' },
+    { name: 'React', logo: getSkillLogo('React') },
+    { name: 'Tensorflow', logo: getSkillLogo('Tensorflow') },
+    { name: 'Mockito', logo: getSkillLogo('Mockito') },
+    { name: 'JUnit', logo: getSkillLogo('JUnit') },
+    { name: 'Pandas', logo: getSkillLogo('Pandas') },
+    { name: 'Handlebars.js', logo: getSkillLogo('Handlebars.js') },
 ]
 
 

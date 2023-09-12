@@ -1,5 +1,6 @@
 import React from 'react';
 import { GitHub, OpenInNew } from '@mui/icons-material';
+import getSkillLogo from './getSkillLogo';
 import '../assets/Projects.css';
 
 
@@ -7,7 +8,7 @@ const Project: React.FC<{name: string, description: string, github: string, link
   return (
     <div className='project'>
       <div className='project-info-container'>
-        <img className='project-image' src={process.env.PUBLIC_URL + props.image} style={{ backgroundColor: props.imageBackground }}/>
+        <img className='project-image' src={process.env.PUBLIC_URL + props.image} style={{ backgroundColor: props.imageBackground }} alt={props.name} />
         <div className='project-header'>
           <h2 className='project-title'>{props.name}</h2>
           { props.links ? <div className='project-links'>
@@ -21,7 +22,7 @@ const Project: React.FC<{name: string, description: string, github: string, link
         <p className='project-description'>{props.description}</p>
       </div>
       <div className='skill-images'>
-          {props.skills.map((skill, index) => <img key={index} src={process.env.PUBLIC_URL + skill} />)}
+          {props.skills.map((skill, index) => <img key={index} src={getSkillLogo(skill)} alt={skill} />)}
       </div>
     </div>
   )
@@ -41,12 +42,7 @@ const Projects: React.FC = () => {
           image='images/spotify-match-logo.png'
           imageBackground='#22223B'
           skills={[
-            'logos/react-logo.svg',
-            'logos/expressjs-logo.svg',
-            'logos/sql-logo.svg',
-            'logos/aws-logo.svg',
-            'logos/jira-logo.svg',
-            'logos/rest-logo.svg',
+            'React', 'Express.js', 'SQL', 'AWS', 'Jira', 'REST'
           ]}/>
           <Project
           name='HTTP Server'
@@ -56,9 +52,7 @@ const Projects: React.FC = () => {
           image='images/terminal-http.jpeg'
           imageBackground='#000'
           skills={[
-            'logos/c-logo.svg',
-            'logos/bash-logo.svg',
-            'logos/unix-logo.svg',
+            'C', 'Bash', 'UNIX'
           ]}/>
           <Project
           name='Personal Portfolio'
@@ -68,10 +62,7 @@ const Projects: React.FC = () => {
           image='images/calder.jpeg'
           imageBackground='#22223B'
           skills={[
-            'logos/react-logo.svg',
-            'logos/html-logo.svg',
-            'logos/css-logo.svg',
-            'logos/typescript-logo.svg',
+            'React', 'HTML', 'CSS', 'TypeScript'
           ]}/>
           <Project
           name='text2gif'
@@ -81,12 +72,7 @@ const Projects: React.FC = () => {
           image='images/text2gif-neural-net.gif'
           imageBackground='#22223B'
           skills={[
-            'logos/python-logo.svg',
-            'logos/tensorflow-logo.svg',
-            'logos/html-logo.svg',
-            'logos/css-logo.svg',
-            'logos/pandas-logo.svg',
-            'logos/flask-logo.svg',
+            'Python', 'Tensorflow', 'HTML', 'CSS', 'Pandas', 'Flask'
           ]}/>
           <Project
           name='Website Design'
@@ -96,8 +82,7 @@ const Projects: React.FC = () => {
           image='images/web-design.png'
           imageBackground='#22223B'
           skills={[
-            'logos/wix-logo.svg',
- 
+            'Wix',
           ]}/>
         </div>
         

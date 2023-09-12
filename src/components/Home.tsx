@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button, Grid, Typography } from '@mui/material';
-import { Link } from 'react-scroll';
 import '../assets/Home.css';
 import Contact from './Contact';
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import getSkillLogo from './getSkillLogo';
 import '../assets/Experience.css';
 
 const ExperienceCard = (props: {title: string, logo: string, company: string, date: string, description: string[], skills: string[]}) => {
@@ -21,7 +22,7 @@ const ExperienceCard = (props: {title: string, logo: string, company: string, da
             <div className='back'>
                 <img src={process.env.PUBLIC_URL + props.logo} alt={props.company} className='company-logo' />
                 <div className='skill-images'>
-                    {props.skills.map((skill, index) => <img key={index} src={process.env.PUBLIC_URL + skill} />)}
+                    {props.skills.map((skill, index) => <img key={index} src={getSkillLogo(skill)} alt={skill} />)}
                 </div>
             </div>
         </div>
@@ -51,20 +52,7 @@ const Experience: React.FC = () => {
                 'Completed stretch goal of building complementary UI that allows scheduling of custom jobs for more granular results',
             ]}
               skills={[
-                'logos/java-logo.svg',
-                'logos/javascript-logo.svg',
-                'logos/aws-logo.svg',
-                'logos/spark-logo.svg',
-                'logos/html-logo.svg',
-                'logos/sql-logo.svg',
-                'logos/git-logo.svg',
-                'logos/cicd-logo.svg',
-                'logos/jira-logo.svg',
-                'logos/spring-logo.svg',
-                'logos/rest-logo.svg',
-                'logos/handlebarsjs-logo.svg',
-                'logos/mockito-logo.svg',
-                'logos/junit-logo.svg',
+                'Java', 'JavaScript', 'AWS', 'Spark', 'HTML', 'SQL', 'git', 'CI/CD', 'Jira', 'Spring', 'REST', 'Handlebars.js', 'Mockito', 'JUnit'
             ]}
           />
           <ExperienceCard
@@ -79,17 +67,7 @@ const Experience: React.FC = () => {
                 'Improved my department’s overall code quality by 40% through implementation of SonarQube in 70 GitLab pipelines',
             ]}
               skills={[
-                'logos/java-logo.svg',
-                'logos/javascript-logo.svg',
-                'logos/react-logo.svg',
-                'logos/html-logo.svg',
-                'logos/css-logo.svg',
-                'logos/sql-logo.svg',
-                'logos/aws-logo.svg',
-                'logos/git-logo.svg',
-                'logos/jira-logo.svg',
-                'logos/graphql-logo.svg',
-                'logos/spring-logo.svg',
+                'Java', 'JavaScript', 'React', 'HTML', 'CSS', 'SQL', 'AWS', 'git', 'Jira', 'GraphQL', 'Spring', 
             ]}
           />
         </div>

@@ -6,7 +6,6 @@ import { Link } from 'react-scroll';
 import '../assets/Navigation.css';
 import Contact from './Contact';
 
-const NAME_ACTIVATION_POINT = 100;
 const BASE_COLOR = '#F1F2F6';
 const ACTIVE_COLOR = '#758BFD';
 
@@ -107,7 +106,7 @@ const Navigation: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  });
 
   const TabsComponent = () => (
     <div className='tabs'>
