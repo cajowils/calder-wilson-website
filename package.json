@@ -1,7 +1,7 @@
 {
   "name": "calder-wilson-website",
   "version": "0.1.0",
-  "homepage": "https://cajowils.github.io/calder-wilson-website",
+  "homepage": "https://calderjwilson.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
