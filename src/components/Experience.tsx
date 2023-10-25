@@ -48,8 +48,8 @@ const Experience: React.FC = () => {
                 'Designed and delivered product that alerts FireTV stakeholders when search results experience performance drops',
                 'Developed AWS Batch job that analyzes millions of search queries, decreasing time spent detecting outages by 70%',
                 'Pioneered the creation of a Java email-sending service and HTML formatter that streamlined data communication',
-                'Utilized JUnit to write comprehensive unit and end-to-end tests',
                 'Increased customer satisfaction by completing stretch goal of creating UI that schedules custom Batch jobs',
+                'Utilized JUnit to write comprehensive unit and end-to-end tests',
             ]}
               skills={[
                 'Java', 'JavaScript', 'AWS', 'Spark', 'HTML', 'SQL', 'git', 'CI/CD', 'Jira', 'Spring', 'REST', 'Handlebars.js', 'Mockito', 'JUnit'
