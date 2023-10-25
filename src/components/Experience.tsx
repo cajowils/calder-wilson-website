@@ -45,11 +45,11 @@ const Experience: React.FC = () => {
               company='Amazon' 
               date='Sept 2022 - Dec 2022' 
               description={[
-                'Designed and delivered innovative product that positively impacted millions of customers, currently in active use',
-                'Developed analytical AWS Batch job, achieving 70% decrease in time spent detecting performance drops and outages',
+                'Designed and delivered product that alerts FireTV stakeholders when search results experience performance drops',
+                'Developed AWS Batch job that analyzes millions of search queries, decreasing time spent detecting outages by 70%',
                 'Pioneered the creation of a Java email-sending service and HTML formatter that streamlined data communication',
-                'Ensured the seamless integration of my product into the codebase by writing comprehensive unit and end-to-end tests',
-                'Completed stretch goal of building complementary UI that allows scheduling of custom jobs for more granular results',
+                'Utilized JUnit to write comprehensive unit and end-to-end tests',
+                'Increased customer satisfaction by completing stretch goal of creating UI that schedules custom Batch jobs',
             ]}
               skills={[
                 'Java', 'JavaScript', 'AWS', 'Spark', 'HTML', 'SQL', 'git', 'CI/CD', 'Jira', 'Spring', 'REST', 'Handlebars.js', 'Mockito', 'JUnit'
@@ -62,8 +62,8 @@ const Experience: React.FC = () => {
               date='June 2022 - Aug 2022' 
               description={[
                 'Enhanced GraphQL API consumer experience by developing an accessible React UI to preview client information',
-                'Slashed MySQL queries by 50% for two separate Spring requests, boosting efficiency and performance',
-                'Minimized AWS costs by optimizing Kubernetes pods using insightful analysis of Kibana logs',
+                'Slashed number of MySQL queries by 50% for two separate Spring requests, boosting efficiency and performance',
+                'Reduced AWS costs by ~$2k/month by optimizing Kubernetes pods using insightful analysis of Kibana logs',
                 'Improved my department’s overall code quality by 40% through implementation of SonarQube in 70 GitLab pipelines',
             ]}
               skills={[
