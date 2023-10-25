@@ -36,6 +36,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+If you are authorized to update the website with changes, you can run:
+
+`npm run deploy`
+
 ## Contributing
 If you find a bug or have an idea for a new feature, feel free to open an issue or create a pull request.
 
